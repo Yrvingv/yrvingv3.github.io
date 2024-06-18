@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page V2</title>
+    <style>
+        body {
+            background-image: url("/Fo6.png");
+            background-size: cover;
+            color: white;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding: 30px;
+        }
+        .logo img {
+            width: 450px;
+        }
+        .video {
+            margin-top: 20px;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 60px 120px;
+            background-color: #28a745;
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+        .form-container {
+            margin-top: 20px;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            text-align: left;
+        }
+        .form-container label, .form-container input {
+            display: block;
+            margin: 30px 0;
+            width: 100%;
+            font-size: 60px;
+        }
+        .form-container input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border-radius: 10px;
+            padding: 20px 100px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="/logo.png" alt="logo">
+        </div>
+        <h1>by YRVING VIERA</h1>
+        <p style="font-size: 60px">De qué se trata el servicio de coaching online</p>
+        <p style="font-size: 60px">para mejorar la productividad</p>
+        <div class="video">
+            <video width="1200" controls>
+                <source src="/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="form-container">
+            <form action="https://formspree.io/f/mzbnwnga" method="POST">
+                <label for="name" style="font-size: 50px">Nombre</label>
+                <input type="text" id="name" name="name" required style="height: 100px;">
+                <label for="email" style="font-size: 50px">Email</label>
+                <input type="email" id="email" name="email" required style="height: 100px;">
+                <input type="submit" value="Enviar" style="font-size: 50px">
+            </form>
+        </div>
+        <p style="font-size: 60px";>HAZ UNA CITA CONMIGO Y PARA MOSTRARTE LOS</p>
+        <p style="font-size: 60px";>DETALLES DEL SERVICIO</p>
+        <a href="{{ url_for('calendar') }}" class="button" style="font-size: 60px">Reservar Cita</a>
+    </div>
+</body>
+</html>
